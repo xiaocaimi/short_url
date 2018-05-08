@@ -1,0 +1,15 @@
+#Options +FollowSymlinks
+RewriteEngine On
+
+RewriteCond %{http_host} ^www.dwz.lt [NC]
+RewriteRule ^(.*)$ http://dwz.lt/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^index.html$ index.php?op=index&method=index [QSA,PT,L]
+RewriteRule ^api.html$ index.php?op=index&method=api_index [QSA,PT,L]
+RewriteRule ^api?(.*)$ index.php?op=index&method=api&$1 [QSA,PT,L]
+RewriteRule ^result?(.*)$ index.php?op=index&method=result&$1 [QSA,PT,L]
+RewriteRule ^.*(\.css|\.js|\.gif|\.png|\.jpg|\.jpeg|\.bmp|\.eot|\.svg|\.ttf|\.woff|\.woff2|\.map|\.zip)$ - [QSA,PT,L]
+RewriteRule ^(.*)$ index.php?op=index&method=hash&hash=$1 [QSA,PT,L]

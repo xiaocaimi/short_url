@@ -1,0 +1,58 @@
+*{
+	margin:0;
+	padding:0;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	top: auto;
+}
+body{
+	font-family:"Arial","Microsoft YaHei";
+	margin:0;
+	padding:0;
+	font-size:12px;
+	color:#5e5e5e;
+ }
+ 
+.error_bg{
+	background-color:#f1f1f1;
+}
+.error_frame{
+	width:420px;
+	margin:0px auto;
+	text-align:center;
+}
+
+.erroe_icon{
+	background:url(../img/error_icon.png) no-repeat 0px 0px;
+	width:175px;
+	height:175px;
+	margin:160px auto 20px auto;
+}
+.error_frame.ip_error .erroe_icon{
+	margin: 80px auto 20px auto;
+}
+.ip_error_text ul{
+	margin-bottom:25px;
+}
+.ip_error_text ul li{
+	line-height:20px;
+}
+.ip_error_text ul li span{
+	padding:0px 10px;
+}
+
+.blue_text {
+    text-decoration: none;
+    color: #078dff;
+    margin: 0px 10px;
+    width: 425px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+a {
+    cursor: pointer;
+}
+
